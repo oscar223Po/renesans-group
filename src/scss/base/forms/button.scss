@@ -1,0 +1,24 @@
+// ========================================================================================================================================================
+// <BUTTONS (a.btn+tab)>
+.button {
+	color: $bgColor;
+	padding: 0px 29px;
+	font-weight: 700;
+	align-items: center;
+	font-size: toRem(14);
+	display: inline-flex;
+	min-height: toRem(45);
+	justify-content: center;
+	border-radius: toRem(10);
+	background-color: $blueColor;
+	transition: background-color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #186899;
+		}
+	}
+	&--fw {
+		width: 100%;
+	}
+}
+// ========================================================================================================================================================

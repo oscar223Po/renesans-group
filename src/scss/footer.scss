@@ -1,0 +1,143 @@
+//========================================================================================================================================================
+// Footer
+.footer {
+	color: $bgColor;
+	padding-top: toRem(45);
+	padding-bottom: toRem(30);
+	background-color: $purpleColor;
+	@media (max-width: $tablet) {
+		padding-top: toRem(25);
+		padding-bottom: toRem(25);
+	}
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__main {
+	}
+
+	&__spollers {
+		display: flex;
+		@include adaptiveValue("gap", 145, 30, 2, $containerWidth, 991.98);
+		@media (max-width: $tablet) {
+			width: 100%;
+			flex-direction: column;
+			&:not(:last-child) {
+				margin-bottom: toRem(25);
+			}
+		}
+	}
+
+	&__bottom {
+	}
+
+	&__mobile-bot {
+		@media (min-width: $tablet) {
+			display: none;
+		}
+	}
+}
+.main-footer {
+	@media (max-width: $tablet) {
+		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: toRem(10);
+		}
+	}
+	&__logo {
+		display: flex;
+		font-size: toRem(45);
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+		@media (max-width: $tablet) {
+			justify-content: center;
+		}
+	}
+
+	&__contacts {
+		&:not(:last-child) {
+			margin-bottom: toRem(24);
+		}
+		@media (max-width: $tablet) {
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: toRem(30);
+			justify-content: space-between;
+			&:not(:last-child) {
+				margin-bottom: toRem(0);
+			}
+		}
+	}
+
+	&__item {
+		line-height: 162%;
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__title {
+		font-weight: 700;
+	}
+
+	&__number {
+		display: flex;
+		gap: toRem(5);
+		transition: color 0.3s ease 0s;
+		span {
+			color: rgba($bgColor, 0.4);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blueColor;
+			}
+		}
+	}
+
+	&__bottom {
+	}
+}
+.bottom-footer {
+	&__socials {
+		display: flex;
+		gap: toRem(20);
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+	}
+
+	&__social {
+		display: flex;
+		transition: opacity 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.7;
+			}
+		}
+	}
+
+	&__copy {
+		font-size: toRem(12);
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+
+	&__rules {
+		font-size: toRem(12);
+		text-decoration: underline;
+		color: rgba(255, 255, 255, 0.5);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}
+//========================================================================================================================================================

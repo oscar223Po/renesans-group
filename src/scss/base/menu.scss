@@ -1,0 +1,208 @@
+// ========================================================================================================================================================
+// Menu
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: $mobile) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: -100%;
+			top: 0;
+			overflow: auto;
+			display: grid;
+			row-gap: toRem(25);
+			grid-template-rows: 1fr auto;
+			padding: toRem(145) toRem(15) toRem(15) toRem(15);
+			transition: left 0.3s;
+			background-color: $bgColor;
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				height: toRem(124);
+				left: -100%;
+				top: 0;
+				transition: left 0.3s;
+				z-index: 2;
+				background-color: $grayLiteColor;
+				border-bottom: toRem(1) solid $purpleColor;
+			}
+			.menu-open & {
+				left: 0;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		row-gap: toRem(15);
+		align-items: center;
+		column-gap: toRem(22);
+		justify-content: center;
+		@media (max-width: $mobile) {
+			align-items: start;
+			row-gap: toRem(20);
+			flex-direction: column;
+			justify-content: start;
+		}
+	}
+	// .menu__item
+	&__item {
+		display: flex;
+		gap: toRem(5);
+		position: relative;
+		align-items: center;
+		flex-direction: row-reverse;
+		&::before {
+			font-weight: 600;
+			color: $purpleColor;
+			font-size: toRem(8);
+			transition: transform 0.3s ease 0s;
+		}
+		@media (max-width: $mobile) {
+			&::before {
+				display: none;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					transform: rotate(-180deg);
+				}
+				.menu__spoller {
+					opacity: 1;
+					visibility: visible;
+				}
+				.menu__link {
+					color: $blueColor;
+				}
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		font-weight: 700;
+		color: $purpleColor;
+		text-transform: uppercase;
+		transition: color 0.3s ease 0s;
+		@include adaptiveValue("font-size", 16, 14, 0, $containerWidth, 991.98);
+		@media (max-width: $mobile) {
+			font-size: toRem(18);
+		}
+	}
+
+	&__spoller {
+		top: 25px;
+		z-index: 1;
+		opacity: 0;
+		width: 100%;
+		visibility: hidden;
+		position: absolute;
+		border-radius: toRem(8);
+		padding: toRem(3) toRem(0);
+		background-color: $bgColor;
+		box-shadow:
+			0 2px 5px 0 rgba(0, 0, 0, 0.1),
+			0 9px 9px 0 rgba(0, 0, 0, 0.09),
+			0 21px 13px 0 rgba(0, 0, 0, 0.05),
+			0 37px 15px 0 rgba(0, 0, 0, 0.01),
+			0 58px 16px 0 rgba(0, 0, 0, 0);
+		transition:
+			opacity 0.3s ease 0s,
+			visibility 0.3s ease 0s;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__spoller-item {
+	}
+
+	&__spoller-link {
+		display: flex;
+		line-height: 120%;
+		color: $purpleColor;
+		font-size: toRem(14);
+		padding: toRem(3) toRem(10);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $greenColor;
+			}
+		}
+	}
+
+	&__mobiles {
+		display: grid;
+		gap: toRem(15);
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__mobile-locations {
+	}
+
+	&__mobile-contacts {
+	}
+}
+// Burger Icon
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #000;
+			border-radius: toRem(5);
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+// ========================================================================================================================================================

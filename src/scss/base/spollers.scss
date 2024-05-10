@@ -1,0 +1,70 @@
+// ========================================================================================================================================================
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+// Блок зі спойлерами
+// Спойлер
+.spollers__item {
+	@media (min-width: $tablet) {
+		max-width: toRem(330);
+	}
+	@media (max-width: $tablet) {
+		border-bottom: toRem(1) solid rgba(255, 255, 255, 0.3);
+	}
+}
+// Заголовок спойлера
+.spollers__title {
+	width: 100%;
+	cursor: pointer;
+	list-style: none;
+	font-weight: 700;
+	text-align: left;
+	position: relative;
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+	&::after {
+		@extend %ic;
+		display: none;
+		content: "\e900";
+	}
+	@media (max-width: $tablet) {
+		gap: toRem(10);
+		display: flex;
+		line-height: 120%;
+		align-items: center;
+		padding-top: toRem(15);
+		padding-bottom: toRem(15);
+		justify-content: space-between;
+		&::after {
+			display: block;
+			font-size: toRem(8);
+			transition: transform 0.3s ease 0s;
+		}
+		&._spoller-active {
+			&::after {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+}
+// Контент спойлера
+.spollers__list {
+	@media (min-width: $tablet) {
+		margin-top: toRem(12);
+	}
+	@media (max-width: $tablet) {
+		padding-bottom: toRem(10);
+	}
+}
+.spollers__li-link {
+	line-height: 225%;
+	color: rgba(255, 255, 255, 0.7);
+	transition: color 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+		}
+	}
+}
+// ========================================================================================================================================================
