@@ -1,0 +1,112 @@
+// ========================================================================================================================================================
+// Catalog
+.catalog {
+	margin-bottom: toRem(30);
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 20);
+		}
+	}
+
+	&__filter {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+
+	&__body {
+		display: grid;
+		align-items: start;
+		@include adaptiveValue("gap", 20, 10);
+		grid-template-columns: toRem(305) 1fr;
+		@media (max-width: $tablet) {
+			grid-template-columns: toRem(230) 1fr;
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__list {
+	}
+
+	&__content {
+	}
+
+	&__articles {
+		&:not(:last-child) {
+			margin-bottom: toRem(30);
+		}
+	}
+
+	&__navigation {
+	}
+}
+.list-catalog {
+	border-radius: toRem(10);
+	background-color: #f3f3f3;
+	padding: toRem(30) toRem(30) toRem(50) toRem(30);
+	@media (max-width: $tablet) {
+		padding: toRem(20) toRem(15) toRem(30) toRem(15);
+	}
+	@media (max-width: $mobile) {
+		padding: toRem(15) toRem(10);
+	}
+	&__item {
+	}
+
+	&__title {
+		display: flex;
+		font-weight: 600;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		&::before {
+			font-size: toRem(8);
+			transition: transform 0.3s ease 0s;
+		}
+		&._spoller-active {
+			&::before {
+				transform: rotate(-180deg);
+			}
+		}
+		@media (min-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__body {
+		@media (max-width: $mobile) {
+			margin-top: toRem(15);
+		}
+	}
+
+	&__li {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__link {
+		display: flex;
+		font-weight: 600;
+		font-size: toRem(18);
+		transition: color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $purpleColor;
+				text-decoration: underline;
+			}
+		}
+		@media (max-width: $tablet) {
+			font-size: toRem(16);
+		}
+		@media (max-width: $mobile) {
+			font-weight: 500;
+		}
+	}
+}
+// ========================================================================================================================================================

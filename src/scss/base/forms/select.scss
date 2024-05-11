@@ -1,6 +1,8 @@
+// ========================================================================================================================================================
 // <SELECT>
 // Сніппет (HTML): sel
 .select {
+	width: 100%;
 	min-width: 0;
 	position: relative;
 	// .select__body
@@ -11,25 +13,29 @@
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #d9d9d9;
+		border: 1px solid #ebebeb;
 		background-color: #fff;
 		cursor: pointer;
 		width: 100%;
 		border-radius: 4px;
+		font-weight: 500;
+		font-size: 12px;
 	}
 	// .select__value
 	&__value {
 		display: flex;
 		min-width: 0;
 		align-items: center;
-		height: toRem(30);
-		padding: 0 toRem(15);
-		gap: toRem(10);
+		height: toRem(40);
+		padding: 0 toRem(10);
+		gap: toRem(5);
 		> * {
 			flex: 1 1 auto;
 		}
 		&:after {
-			content: "";
+			@extend %ic;
+			content: "\e900";
+			font-size: toRem(6);
 			align-self: stretch;
 			flex: 0 0 10px;
 			transition: all 0.3s ease 0s;
@@ -70,15 +76,15 @@
 	&__options {
 		color: #000;
 		position: absolute;
-		top: calc(100% - toRem(1));
+		top: calc(100% - toRem(3));
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
 		background-color: #fff;
 		border-top: 0;
-		border: 1px solid #d9d9d9;
+		border: 1px solid #ebebeb;
 		border-top: 0;
-		padding: 10px 0px 5px 0px;
+		padding: 0px 0px 5px 0px;
 	}
 	// .select__scroll
 	&__scroll {
@@ -98,8 +104,9 @@
 		width: 100%;
 		text-align: left;
 		cursor: pointer;
-		padding: 5px 15px;
+		padding: 5px 10px;
 		color: inherit;
+		font-size: toRem(12);
 		&._select-selected {
 			background-color: #eee;
 		}
@@ -145,8 +152,9 @@
 	&._select-checkbox {
 	}
 }
-
+// ========================================================================================================================================================
 // Тег
 ._select-tag {
 	cursor: pointer;
 }
+// ========================================================================================================================================================

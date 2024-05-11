@@ -186,6 +186,9 @@ summary {
 	grid-template-columns: repeat(auto-fill, minmax(toRem(270), 1fr));
 	@include adaptiveValue("row-gap", 25, 10, 0, $containerWidth, 767.98);
 	@include adaptiveValue("column-gap", 20, 10, 0, $containerWidth, 767.98);
+	@media (max-width: toEm(869.98)) {
+		grid-template-columns: repeat(auto-fill, minmax(toRem(210), 1fr));
+	}
 	&__item {
 		border-radius: toRem(10);
 		background-color: $grayLiteColor;
@@ -202,7 +205,7 @@ summary {
 					0 65px 18px 0 rgba(0, 0, 0, 0);
 			}
 		}
-		@media (max-width: $mobile) {
+		@media (max-width: toEm(869.98)) {
 			padding: toRem(10) toRem(10) toRem(14) toRem(10);
 		}
 	}
@@ -211,6 +214,11 @@ summary {
 		position: relative;
 		&:not(:last-child) {
 			margin-bottom: toRem(40);
+		}
+		@media (max-width: toEm(869.98)) {
+			&:not(:last-child) {
+				margin-bottom: toRem(20);
+			}
 		}
 	}
 
@@ -237,6 +245,10 @@ summary {
 		gap: toRem(8);
 		position: absolute;
 		align-items: center;
+		@media (max-width: toEm(869.98)) {
+			gap: toRem(4);
+			bottom: -10px;
+		}
 	}
 
 	&__label {
@@ -257,13 +269,23 @@ summary {
 		&--pc {
 			background-color: $purpleColor;
 		}
+		@media (max-width: toEm(869.98)) {
+			font-size: toRem(10);
+			min-height: toRem(20);
+			padding: toRem(0) toRem(10);
+		}
 	}
 
 	&__name {
 		font-weight: 600;
-		font-size: toRem(20);
+		@include adaptiveValue("font-size", 20, 18);
 		&:not(:last-child) {
 			margin-bottom: toRem(15);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
 		}
 	}
 
@@ -275,16 +297,21 @@ summary {
 			display: flex;
 			font-weight: 700;
 			color: $purpleColor;
-			font-size: toRem(24);
+			@include adaptiveValue("font-size", 24, 16);
 		}
 		&:not(:last-child) {
 			margin-bottom: toRem(14);
+		}
+		@media (max-width: $mobileSmall) {
+			&:not(:last-child) {
+				margin-bottom: toRem(5);
+			}
 		}
 	}
 
 	&__infos {
 		&:not(:last-child) {
-			margin-bottom: toRem(24);
+			@include adaptiveValue("margin-bottom", 24, 14);
 		}
 	}
 
@@ -297,9 +324,17 @@ summary {
 		h5 {
 			color: rgba($mainColor, 0.5);
 		}
+		@media (max-width: toEm(869.98)) {
+			font-size: toRem(12);
+		}
 	}
 
 	&__button {
+		@media (max-width: toEm(869.98)) {
+			width: 100%;
+			padding: toRem(0);
+			min-height: toRem(35);
+		}
 	}
 }
 //========================================================================================================================================================
@@ -311,6 +346,172 @@ summary {
 	p {
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+}
+//========================================================================================================================================================
+// Breadcrumbs
+.breadcrumbs {
+	padding-top: toRem(20);
+	padding-bottom: toRem(15);
+	&__container {
+	}
+
+	&__list {
+		gap: toRem(5);
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	&__item {
+		font-size: toRem(14);
+		color: rgba($mainColor, 0.6);
+		a {
+			color: $blueColor;
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	&__link {
+	}
+
+	&__current {
+	}
+}
+//========================================================================================================================================================
+// Filter
+.filter {
+	border-radius: toRem(10);
+	background-color: #f3f3f3;
+	padding: toRem(30) toRem(35);
+	@media (max-width: $tablet) {
+		padding: toRem(15);
+	}
+	&__forms {
+		gap: toRem(10);
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(160), 1fr));
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(10);
+			}
+		}
+	}
+
+	&__form {
+		width: 100%;
+	}
+
+	&__label {
+		font-weight: 500;
+		font-size: toRem(12);
+		&:not(:last-child) {
+			margin-bottom: toRem(12);
+		}
+	}
+
+	&__selects {
+		display: flex;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: toRem(10);
+		align-items: center;
+	}
+
+	&__button {
+		padding: toRem(0) toRem(55);
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+			padding: toRem(0);
+		}
+	}
+}
+//========================================================================================================================================================
+.navigation {
+	display: flex;
+	gap: toRem(10);
+	flex-wrap: wrap;
+	@media (max-width: $mobile) {
+		justify-content: center;
+	}
+	&__item {
+	}
+
+	&__link {
+		display: flex;
+		width: toRem(48);
+		height: toRem(48);
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(10);
+		color: rgba($mainColor, 0.5);
+		border: toRem(2) solid #dfdfdf;
+		transition: background-color 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $grayLiteColor;
+			}
+		}
+		&--active {
+			opacity: 1;
+			font-weight: 700;
+			color: $blueColor;
+			pointer-events: none;
+			border: toRem(2) solid $blueColor;
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(38);
+			height: toRem(38);
+		}
+	}
+
+	&__arrow {
+		display: flex;
+		width: toRem(48);
+		font-weight: 300;
+		height: toRem(48);
+		font-size: toRem(8);
+		align-items: center;
+		justify-content: center;
+		border-radius: toRem(10);
+		transform: rotate(-90deg);
+		transition:
+			color 0.3s ease 0s,
+			background-color 0.3s ease 0s,
+			border 0.3s ease 0s;
+		border: toRem(2) solid #dfdfdf;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $bgColor;
+				background-color: $blueColor;
+				border: toRem(2) solid $bgColor;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			width: toRem(38);
+			height: toRem(38);
+		}
+	}
+
+	&__span {
+		display: flex;
+		width: toRem(30);
+		height: toRem(48);
+		align-items: center;
+		justify-content: center;
+		@media (max-width: $mobileSmall) {
+			width: toRem(25);
+			height: toRem(38);
 		}
 	}
 }
