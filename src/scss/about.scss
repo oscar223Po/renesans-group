@@ -1,0 +1,146 @@
+// ========================================================================================================================================================
+// About
+.about {
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 25, 20);
+		}
+	}
+
+	&__body {
+		display: grid;
+		@include adaptiveValue("gap", 80, 15, 0, $containerWidth, 767.98);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 55, 35);
+		}
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__descript {
+	}
+
+	&__mission {
+	}
+
+	&__values {
+	}
+}
+.descript-about {
+	&__image {
+		overflow: hidden;
+		border-radius: toRem(10);
+		img {
+			width: 100%;
+			transform: scale(1.01);
+		}
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 55, 20);
+		}
+	}
+
+	&__text {
+		span {
+			display: flex;
+		}
+	}
+}
+.mission-about {
+	&__text {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 55, 25);
+		}
+	}
+
+	&__blocks {
+		display: grid;
+		@include adaptiveValue("gap", 30, 15);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 55, 25);
+		}
+	}
+
+	&__block {
+		border-radius: toRem(10);
+		background-color: $purpleColor;
+		@include adaptiveValue("padding", 70, 20, 0, $containerWidth, 767.98);
+	}
+
+	&__content {
+		h4 {
+			color: rgba(255, 255, 255, 0.8);
+			&:not(:last-child) {
+				margin-bottom: toRem(14);
+			}
+		}
+		p {
+			color: $bgColor;
+		}
+	}
+
+	&__partners {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 30, 15);
+		}
+	}
+
+	&__images {
+		display: grid;
+		align-items: center;
+		justify-content: space-between;
+		grid-template-columns: repeat(3, 1fr);
+		@include adaptiveValue("row-gap", 30, 15);
+		@include adaptiveValue("column-gap", 60, 10);
+	}
+
+	&__image {
+		display: flex;
+		img {
+			max-width: 100%;
+		}
+	}
+}
+.values-about {
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 24, 14);
+		}
+	}
+
+	&__body {
+		display: grid;
+		@include adaptiveValue("gap", 80, 15, 0, $containerWidth, 767.98);
+		@media (min-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__left {
+	}
+
+	&__right {
+		ul {
+			padding-left: toRem(7);
+		}
+		li {
+			display: flex;
+			gap: toRem(7);
+			&::before {
+				content: "";
+				height: toRem(3);
+				border-radius: 50%;
+				min-width: toRem(3);
+				margin-top: toRem(10);
+				background-color: $mainColor;
+			}
+		}
+	}
+}
+// ========================================================================================================================================================

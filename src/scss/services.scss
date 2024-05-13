@@ -1,0 +1,144 @@
+// ========================================================================================================================================================
+// Services
+.services {
+	&__container {
+	}
+
+	&__title {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 0, 20);
+		}
+	}
+
+	&__body {
+		display: grid;
+		gap: toRem(30);
+		align-items: center;
+		grid-template-columns: 1fr toRem(305);
+		@media (max-width: $mobile) {
+			gap: toRem(15);
+			grid-template-columns: auto;
+		}
+	}
+
+	&__lists {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+
+	&__contacts {
+	}
+
+	&__text {
+		max-width: toRem(815);
+	}
+
+	&__list {
+	}
+}
+.lists-services {
+	@include adaptiveValue("padding-top", 0, 20, 0, $containerWidth, 767.98);
+	&__title {
+		font-weight: 600;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 35, 20);
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(toRem(300), 1fr));
+		@include adaptiveValue("gap", 40, 15, 0, $containerWidth, 767.98);
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 40, 25);
+		}
+		@media (max-width: $mobile) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width: $mobileSmall) {
+			grid-template-columns: auto;
+		}
+	}
+
+	&__item {
+		display: flex;
+		@include adaptiveValue("gap", 25, 10, 2, $containerWidth, 767.98);
+		@media (max-width: $mobile) {
+			gap: toRem(5);
+			align-items: start;
+			flex-direction: column;
+		}
+		@media (max-width: $mobileSmall) {
+			&:nth-child(2n) {
+				align-items: end;
+				text-align: right;
+			}
+		}
+	}
+
+	&__number {
+		display: flex;
+		font-weight: 600;
+		color: $blueColor;
+		min-width: toRem(35);
+		justify-content: center;
+		@include adaptiveValue("font-size", 50, 25);
+		@media (max-width: $mobile) {
+			min-width: toRem(25);
+		}
+		@media (max-width: $mobileSmall) {
+			min-width: toRem(20);
+		}
+	}
+
+	&__text {
+	}
+
+	&__tip {
+		max-width: toRem(600);
+	}
+}
+.contacts-services {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: toRem(15);
+	align-items: center;
+	padding: toRem(30) toRem(0);
+	border-top: toRem(1) solid $blueColor;
+	border-bottom: toRem(1) solid $blueColor;
+	@include adaptiveValue("column-gap", 50, 20, 0, $containerWidth, 767.98);
+	@media (max-width: $mobile) {
+		align-items: start;
+		flex-direction: column;
+		padding: toRem(15) toRem(0);
+	}
+	&__title {
+		font-weight: 600;
+		max-width: toRem(460);
+	}
+
+	&__item {
+		line-height: 162%;
+		@include adaptiveValue("font-size", 16, 14);
+	}
+
+	&__adres {
+		font-weight: 700;
+		color: $purpleColor;
+	}
+
+	&__phones {
+	}
+
+	&__phone {
+		display: flex;
+		font-weight: 500;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+// ========================================================================================================================================================

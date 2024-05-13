@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -152,8 +152,8 @@ function initSliders() {
 
 			// Кнопки "вліво/вправо"
 			navigation: {
-				prevEl: '.arrows__arrow--prev',
-				nextEl: '.arrows__arrow--next',
+				prevEl: '.gallery-parts__arrow--prev',
+				nextEl: '.gallery-parts__arrow--next',
 			},
 			// Брейкпоінти
 			breakpoints: {
@@ -175,6 +175,230 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				1130: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
+			// Події
+			on: {
+
+			}
+		});
+	}
+	// ========================================================================================================================================================
+	if (document.querySelector('.content-article__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.content-article__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			spaceBetween: 30,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагінація
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.content-article__arrow--prev',
+				nextEl: '.content-article__arrow--next',
+			},
+			/*
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				480: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 15,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1130: {
+					slidesPerView: 4,
+					spaceBetween: 20,
+				},
+			},
+			*/
+			// Події
+			on: {
+
+			}
+		});
+	}
+	// ========================================================================================================================================================
+	if (document.querySelector('.gallery-article__thumbs')) {
+		const thumbsSwiper = new Swiper('.gallery-article__thumbs', {
+			modules: [Thumbs],
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 10,
+			parallax: true,
+			speed: 800,
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+					autoHeight: true,
+				},
+				480: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				1099.98: {
+					slidesPerView: 4,
+					spaceBetween: 10,
+				},
+			},
+			on: {
+				init: function (swiper) {
+				}
+			}
+		});
+		new Swiper('.gallery-article__slider', {
+			modules: [Thumbs, Pagination],
+			thumbs: {
+				swiper: thumbsSwiper
+			},
+			observer: true,
+			watchOverflow: true,
+			observeParents: true,
+			slidesPerView: 1,
+			spaceBetween: 10,
+			speed: 800,
+			pagination: {
+				el: '.gallery-article__dotts',
+				clickable: true,
+				dynamicBullets: true
+			},
+			// Dotts
+			on: {
+				init: function (swiper) {
+				}
+			}
+		});
+	}
+	// ========================================================================================================================================================
+	if (document.querySelector('.interest__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.interest__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Navigation],
+			observer: true,
+			observeParents: true,
+			slidesPerView: 4,
+			spaceBetween: 20,
+			//autoHeight: true,
+			speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			//loop: true,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагінація
+			/*
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+			},
+			*/
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			navigation: {
+				prevEl: '.interest__arrow--prev',
+				nextEl: '.interest__arrow--next',
+			},
+			// Брейкпоінти
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				449: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				992: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				},
+				1140: {
 					slidesPerView: 4,
 					spaceBetween: 20,
 				},

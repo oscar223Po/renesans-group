@@ -356,6 +356,22 @@
 	}
 
 	&__arrows {
+		@media (min-width: toEm(1449.98)) {
+			top: 50%;
+			transform: translate(0px, -50%);
+		}
+		@media (max-width: toEm(1449.98)) {
+			bottom: -50px;
+			gap: toRem(10);
+			align-items: center;
+			justify-content: center;
+		}
+		.arrows__arrow {
+			margin: toRem(0) toRem(-65);
+			@media (max-width: toEm(1449.98)) {
+				margin: toRem(0);
+			}
+		}
 	}
 }
 //========================================================================================================================================================
@@ -473,6 +489,9 @@
 .quest {
 	position: relative;
 	@include adaptiveValue("padding-top", 115, 45);
+	&.pad-no {
+		padding-top: toRem(0);
+	}
 	&__inner {
 		position: relative;
 		padding-bottom: toRem(50);

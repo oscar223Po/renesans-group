@@ -36,6 +36,10 @@ summary {
 		font-weight: 600;
 		@include adaptiveValue("font-size", 40, 24);
 	}
+	&--nor {
+		font-weight: 600;
+		@include adaptiveValue("font-size", 32, 18);
+	}
 }
 //========================================================================================================================================================
 // Arrows Big Gray
@@ -98,16 +102,6 @@ summary {
 	position: absolute;
 	align-items: center;
 	justify-content: space-between;
-	@media (min-width: toEm(1449.98)) {
-		top: 50%;
-		transform: translate(0px, -50%);
-	}
-	@media (max-width: toEm(1449.98)) {
-		bottom: -50px;
-		gap: toRem(10);
-		align-items: center;
-		justify-content: center;
-	}
 	&__arrow {
 		display: flex;
 		width: toRem(36);
@@ -117,7 +111,6 @@ summary {
 		align-items: center;
 		font-size: toRem(10);
 		justify-content: center;
-		margin: toRem(0) toRem(-65);
 		border: toRem(1.5) solid $purpleColor;
 		transition:
 			background-color 0.3s ease 0s,
@@ -128,9 +121,6 @@ summary {
 				background-color: $purpleColor;
 			}
 		}
-		@media (max-width: toEm(1449.98)) {
-			margin: toRem(0);
-		}
 		&--prev {
 			transform: rotate(90deg);
 		}
@@ -138,6 +128,23 @@ summary {
 		&--next {
 			transform: rotate(-90deg);
 		}
+	}
+}
+// Dotts
+.dotts {
+	display: flex;
+	gap: toRem(5);
+	align-items: center;
+	.swiper-pagination-bullet {
+		cursor: pointer;
+		height: toRem(8);
+		min-width: toRem(16);
+		border-radius: toRem(10);
+		background-color: $bgColor;
+		transition: background-color 0.3s ease 0s;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $blueColor;
 	}
 }
 //========================================================================================================================================================
@@ -252,9 +259,9 @@ summary {
 	}
 
 	&__label {
-		display: flex;
 		color: $bgColor;
 		align-items: center;
+		display: inline-flex;
 		font-size: toRem(12);
 		min-height: toRem(26);
 		justify-content: center;
@@ -344,6 +351,20 @@ summary {
 	line-height: 162%;
 	@include adaptiveValue("font-size", 16, 14);
 	p {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 20, 10);
+		}
+	}
+	span {
+		font-weight: 700;
+	}
+	li {
+		list-style: none;
+	}
+	blockquote {
+		font-weight: 500;
+		line-height: 142%;
+		@include adaptiveValue("font-size", 24, 16);
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 20, 10);
 		}
@@ -512,6 +533,51 @@ summary {
 		@media (max-width: $mobileSmall) {
 			width: toRem(25);
 			height: toRem(38);
+		}
+	}
+}
+//========================================================================================================================================================
+// List
+.list {
+	border-radius: toRem(10);
+	background-color: #f3f3f3;
+	padding: toRem(30) toRem(15);
+	@media (max-width: $mobile) {
+		padding: toRem(20) toRem(10);
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: toRem(15);
+		}
+	}
+
+	&__link {
+		display: flex;
+		gap: toRem(15);
+		font-weight: 600;
+		line-height: 121%;
+		color: $purpleColor;
+		font-size: toRem(14);
+		transition: color 0.3s ease 0s;
+		&::before {
+			opacity: 0.3;
+			display: flex;
+			font-weight: 500;
+			height: toRem(16);
+			border-radius: 50%;
+			font-size: toRem(5);
+			align-items: center;
+			color: $purpleColor;
+			margin-top: toRem(1);
+			min-width: toRem(16);
+			justify-content: center;
+			transform: rotate(-90deg);
+			border: toRem(1) solid $purpleColor;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: $greenColor;
+			}
 		}
 	}
 }
