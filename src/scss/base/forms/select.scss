@@ -127,6 +127,7 @@
 	&__text {
 	}
 
+	/*
 	&--show-top {
 		.select__options {
 			top: auto;
@@ -137,6 +138,7 @@
 			padding: 5px 0px 10px 0px;
 		}
 	}
+	*/
 
 	// Стан селекту
 	&._select-open {
@@ -150,6 +152,25 @@
 	&._select-multiple {
 	}
 	&._select-checkbox {
+	}
+
+	&_cart {
+		.select__title {
+			font-weight: 400;
+			font-size: toRem(14);
+			color: rgba($mainColor, 0.7);
+		}
+		.select__value {
+			height: toRem(60);
+			padding: 0 toRem(20);
+		}
+		.select__options {
+			top: calc(100% - toRem(5));
+		}
+		.select__option {
+			padding: 7px 20px;
+			font-size: toRem(14);
+		}
 	}
 }
 // ========================================================================================================================================================

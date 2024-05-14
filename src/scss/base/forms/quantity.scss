@@ -1,54 +1,45 @@
-//<QUANTITY>
-// Сніппет (HTML): qa
+// ========================================================================================================================================================
+// <QUANTITY>
 .quantity {
-	width: 88px;
-	height: 40px;
 	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
+	gap: toRem(10);
 	// .quantity__button
 	&__button {
-		flex: 0 0 30px;
-		position: relative;
-		cursor: pointer;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: #a6a6a6;
-			width: 9px;
-			height: 1px;
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before,
-				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
+		height: 40px;
+		width: toRem(14);
+		text-align: center;
+		font-size: toRem(24);
+		transition: color 0.3s ease 0s;
 		// .quantity__button_plus
 		&--plus {
-			&::before {
-				transform: rotate(-90deg);
+			@media (any-hover: hover) {
+				&:hover {
+					color: $blueColor;
+				}
 			}
 		}
 		// .quantity__button_minus
 		&--minus {
+			@media (any-hover: hover) {
+				&:hover {
+					color: $redColor;
+				}
+			}
 		}
 	}
 	// .quantity__input
 	&__input {
-		flex: 1 1 auto;
+		overflow: hidden;
 		input {
-			height: 100%;
-			color: #a6a6a6;
-			font-size: 12px;
-			width: 100%;
+			height: toRem(40);
+			font-size: 14px;
+			width: toRem(40);
 			text-align: center;
+			border-radius: toRem(4);
+			outline-color: $purpleColor;
+			background-color: $bgColor;
+			border: toRem(1) solid #ebebeb;
 		}
 	}
 }
+// ========================================================================================================================================================

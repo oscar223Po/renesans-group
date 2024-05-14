@@ -2,15 +2,22 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
-	&__inputs {
+	display: grid;
+	@include adaptiveValue("gap", 20, 10);
+	&__inputs,
+	&__selects {
 		display: flex;
 		@include adaptiveValue("gap", 20, 10);
-		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 20, 10);
-		}
 		@media (max-width: $mobileSmall) {
 			flex-direction: column;
 		}
+	}
+
+	&__label {
+		display: flex;
+	}
+
+	&__checkbox {
 	}
 
 	&__input {
@@ -31,11 +38,11 @@
 //--------------------------------------------------------------
 // <CHECK>
 // Сніппет (HTML): chk
-// @import "checkbox";
+@import "checkbox";
 //--------------------------------------------------------------
 // <RADIO>
 // Сніппет (HTML): opt
-// @import "radio";
+@import "radio";
 //--------------------------------------------------------------
 // <SELECT>
 // Сніппет (HTML): sel
@@ -47,7 +54,7 @@
 //--------------------------------------------------------------
 // <QUANTITY>
 // Сніппет (HTML): qa
-// @import "quantity";
+@import "quantity";
 //--------------------------------------------------------------
 // <RANGE>
 // Сніппет (HTML):

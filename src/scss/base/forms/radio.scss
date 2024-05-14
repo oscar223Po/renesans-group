@@ -1,14 +1,15 @@
+// ========================================================================================================================================================
+// Options
 .options {
 	display: flex;
-	flex-direction: column;
+	flex-wrap: wrap;
+	row-gap: toRem(10);
+	column-gap: toRem(20);
 	align-items: flex-start;
 	// .options__item
 	&__item {
 		position: relative;
 		cursor: pointer;
-		&:not(:last-child) {
-			margin-bottom: em(5);
-		}
 	}
 	// .options__input
 	&__input {
@@ -30,13 +31,13 @@
 		display: inline-flex;
 		align-items: center;
 		cursor: pointer;
-		gap: 10px;
+		gap: 5px;
 		&:before {
 			content: "";
 			align-self: flex-start;
-			width: 20px;
-			height: 20px;
-			flex: 0 0 20px;
+			width: 24px;
+			height: 24px;
+			flex: 0 0 24px;
 			border-radius: 50%;
 			border: 1px solid #a7a9ac;
 		}
@@ -44,16 +45,19 @@
 			content: "";
 			transition: all 0.3s ease 0s;
 			transform: scale(0);
-			width: 10px;
-			height: 10px;
+			width: 12px;
+			height: 12px;
 			border-radius: 50%;
-			background-color: #77243a;
+			background-color: $greenColor;
 			position: absolute;
-			left: 5px;
-			top: 5px;
+			left: 6px;
+			top: 6px;
 		}
 	}
 	// .options__text
 	&__text {
+		font-weight: 500;
+		line-height: 150%;
 	}
 }
+// ========================================================================================================================================================

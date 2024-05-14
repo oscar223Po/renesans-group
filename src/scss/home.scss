@@ -1,6 +1,11 @@
 //========================================================================================================================================================
 // Hero
 .hero {
+	&.hero-serv {
+		.hero__body {
+			padding: toRem(20) toRem(20) toRem(20) toRem(0);
+		}
+	}
 	&__main {
 		overflow: hidden;
 		position: relative;
@@ -492,6 +497,12 @@
 	&.pad-no {
 		padding-top: toRem(0);
 	}
+	&.pad-min {
+		@include adaptiveValue("padding-top", 50, 30);
+	}
+	&.pad-pr {
+		@include adaptiveValue("padding-top", 70, 80);
+	}
 	&__inner {
 		position: relative;
 		padding-bottom: toRem(50);
@@ -525,7 +536,7 @@
 
 	&__title {
 		@media (min-width: $mobile) {
-			max-width: toRem(360);
+			max-width: toRem(380);
 		}
 	}
 
@@ -557,6 +568,28 @@
 		@include adaptiveValue("gap", 30, 15);
 		@media (max-width: $mobileSmall) {
 			flex-direction: column;
+		}
+	}
+
+	&__file {
+		display: flex;
+		gap: toRem(14);
+		align-items: center;
+		font-size: toRem(14);
+		&::before {
+			color: $blueColor;
+			font-size: toRem(24);
+			transition: color 0.3s ease 0s;
+		}
+		&:not(:last-child) {
+			margin-bottom: toRem(20);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					color: $greenColor;
+				}
+			}
 		}
 	}
 

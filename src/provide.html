@@ -1,72 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-	<title>Renesans Group (О компании) - AboutPage</title>
-	<meta charset="UTF-8">
-	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20240514182414">
-	<link rel="shortcut icon" href="img/icons/head-logo.svg">
-	<!-- <meta name="robots" content="noindex, nofollow"> -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+@@include('html/_head.htm',{
+"title":"Renesans Group (Сервис) - ProvidePage"
+})
 
 <body>
 	<div class="wrapper">
-		<!-- Header -->
-		<header class="header">
-			<div class="header__container">
-				<div class="header__top top-header">
-					<div data-da=".menu__mobile-locations, 767.98" class="top-header__locations">
-						<div class="top-header__location _icon-location">г. Артём, ул. Орджоникидзе, д.15</div>
-						<div class="top-header__location _icon-location">с. Михайловка, ул. Паровозная. д.37</div>
-					</div>
-					<div class="top-header__actions">
-						<div class="top-header__links">
-							<a href="" class="top-header__link _icon-phone">Контакты</a>
-							<a href="" class="top-header__link _icon-mail">Написать нам</a>
-						</div>
-						<div class="top-header__buttons">
-							<a href="" class="top-header__button _icon-search"></a>
-							<a href="" class="top-header__button _icon-cart"><span>3</span></a>
-						</div>
-					</div>
-				</div>
-				<div class="header__main main-header">
-					<a href="" class="main-header__logo _icon-logo"></a>
-					<div class="main-header__menu menu">
-						<button type="button" class="menu__icon icon-menu"><span></span></button>
-						<nav class="menu__body">
-							<ul class="menu__list">
-								<li class="menu__item _icon-arrow-cr">
-									<a href="" class="menu__link">О КОМПАНИИ</a>
-									<ul class="menu__spoller">
-										<li class="menu__spoller-item"><a href="" class="menu__spoller-link">Вакансии</a></li>
-										<li class="menu__spoller-item"><a href="" class="menu__spoller-link">Вакансии</a></li>
-										<li class="menu__spoller-item"><a href="" class="menu__spoller-link">Вакансии</a></li>
-									</ul>
-								</li>
-								<li class="menu__item"><a href="" class="menu__link">СЕРВИС</a></li>
-								<li class="menu__item"><a href="" class="menu__link">ЗАПЧАСТИ</a></li>
-								<li class="menu__item"><a href="" class="menu__link">ПРОДАЖА ТЕХНИКИ</a></li>
-								<li class="menu__item"><a href="" class="menu__link">НОВОСТИ</a></li>
-								<li class="menu__item"><a href="" class="menu__link">АКЦИИ</a></li>
-							</ul>
-							<div class="menu__mobiles">
-								<div class="menu__mobile-locations"></div>
-								<div class="menu__mobile-contacts"></div>
-							</div>
-						</nav>
-					</div>
-					<div data-da=".menu__mobile-contacts, 767.98" class="main-header__contacts">
-						<a href="tel:74232463439" class="main-header__contact">+7 (423) 246 34 39</a>
-						<a href="tel:74232648005" class="main-header__contact">+7 (423) 264 80 05</a>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
+		@@include('html/_header.htm',{})
 		<main class="page">
 			<!-- [Breadcrumbs] -->
 			<nav class="breadcrumbs">
@@ -77,118 +17,189 @@
 						</li>
 						<span>—</span>
 						<li class="breadcrumbs__item">
-							<span class="breadcrumbs__current">О компании</span>
+							<span class="breadcrumbs__current">Сервис</span>
 						</li>
 					</ul>
 				</div>
 			</nav>
-			<!-- [About] -->
-			<section class="about">
-				<div class="about__container">
-					<h3 class="about__title title title--ord">О компании</h3>
-					<div class="about__body">
-						<div class="about__descript descript-about">
-							<div class="descript-about__image"><img src="img/about.webp" alt="Image"></div>
-							<div class="descript-about__text text">
-								<p>На сегодняшний день в компании работает более 100 квалифицированных специалистов. Обучение персонала является одной из основных задач нашей компании. Кадровые и производственные мощности нашего предприятия позволяют оперативно обслуживать и ремонтировать технику наших клиентов. Наша компания имеет в собственности два сервисных центра технического обслуживания грузовых автомобилей.</p>
-								<p>
-								<div>
-									<span>Основной сервисный центр находится в пригороде г. Владивостока</span>
-									(г. Артем, ул. Орджоникидзе, дом 15.). Общая площадь участка - 4,5 га., производственная площадь - 3 000 кв.м., в том числе:
-									<ul>
-										<li>- мастерская на 15 постов;</li>
-										<li>- автомойка - 200 кв.м. со сквозным проездом;</li>
-										<li>- кузовной цех – 400 кв.м</li>
-									</ul>
-								</div>
-								</p>
-								<p>
-									<span>Второй сервисный центр расположен в пригороде г. Уссурийск.</span>
-									(с. Михайловка, ул. Паровозная д.37) на пересечении главных транзитных магистралей региона. Общая площадь участка составляет 9 га., производственная площадь - 2 500 кв. 
-								</p>
-								<p>
-								<div>
-									<span>Сервисный центр включает в себя:</span>
-									а также имеется охраняемая, заасфальтированная парковка площадью 1 га.
-									<ul>
-										<li>- мастерская на 12 постов;</li>
-										<li>- автомойка - 200 кв м. со сквозным проездом;</li>
-										<li>- шиномонтаж</li>
-									</ul>
-								</div>
-								</p>
-								<p><i>Компания располагает всеми необходимыми производственными мощностями и квалифицированными кадрами для решения любых задач по сервисному обслуживанию и ремонту грузовых автомобилей. </i></p>
-							</div>
-						</div>
-						<div class="about__mission mission-about">
-							<div class="mission-about__text text">
-								<blockquote>АО ИК «Ренессанс Групп» - это современный многоцелевой грузовой центр по ремонту и техническому обслуживанию грузовых автомобилей, а также прицепной техники и продаже запасных частей.</blockquote>
-								<p>Является официальным дилером SINOTRUK и занимает одну из лидирующих позиций на российском рынке по обслуживанию и продаже грузовой техники. А также наша компания является официальным дилером ООО МЗ «ТОНАР» в Приморском крае.</p>
-							</div>
-							<div class="mission-about__blocks">
-								<div class="mission-about__block">
-									<div class="mission-about__content">
-										<h4 class="title title--ord">Миссия</h4>
-										<p class="text">– быть лидером на рынке сервисного обслуживания и продаж коммерческой техники путём оказания услуг высокого качества.</p>
-									</div>
-								</div>
-								<div class="mission-about__block">
-									<div class="mission-about__content">
-										<h4 class="title title--ord">Стратегия</h4>
-										<p class="text">– расширение масштабов бизнеса, повышение качества обслуживания клиентов.</p>
-									</div>
-								</div>
-							</div>
-							<div class="mission-about__partners">
-								<h3 class="mission-about__title title title--nor">Наши партнеры</h3>
-								<div class="mission-about__images">
-									<div class="mission-about__image"><img src="img/partners/logos/01.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/02.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/03.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/04.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/05.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/06.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/01.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/02.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/03.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/04.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/05.svg" alt="Image"></div>
-									<div class="mission-about__image"><img src="img/partners/logos/06.svg" alt="Image"></div>
-								</div>
+			<!-- [Head Title] -->
+			<section class="head-title">
+				<div class="head-title__container">
+					<h3 class="head-title__title title title--ord">Сервис</h3>
+				</div>
+			</section>
+			<!-- [Hero] -->
+			<section class="hero hero-serv">
+				<div class="hero__main">
+					<div class="hero__content">
+						<div class="hero__container">
+							<div class="hero__body">
+								<h1 class="hero__title title title--big">Ремонт и обслуживание спецтехники</h1>
 							</div>
 						</div>
 					</div>
-					<div class="about__values values-about">
-						<h3 class="values-about__title title title--nor">Ценности</h3>
-						<div class="values-about__body">
-							<div class="values-about__left text">
-								<p><span>Единство</span> – Мы единомышленники, мы сильны единой командой профессионалов, идущих в одном направлении, к единой цели.</p>
-								<p><span>Честность</span> – репутация честной и порядочной компании позволяет нам развивать бизнес, желание наших клиентов и партнёров сотрудничать и строить долгосрочные, доверительные отношения являются главным доказательством правильности выбранных ценностей.</p>
-								<p><span>Клиенты</span> – уважая постоянного клиента сегодня, мы обеспечиваем благополучие компании в будущем. Мы всегда стремимся к совершенству и более 10 лет оказываем профессиональные услуги в сфере ремонта и технического обслуживания грузовых автомобилей. </p>
-								<p><i>Мы ценим ваше время, и всегда готовы помочь и проконсультировать вас об услугах, которые мы предоставляем.</i></p>
-								<p><i>Если вам необходимо приобрести запчасть, купить технику или записаться на техобслуживание или ремонт оставляйте - заявку на нашем сайте, либо позвоните по телефону специалистам!</i></p>
+					<div class="hero__slider swiper">
+						<div class="hero__wrapper swiper-wrapper">
+							<div class="hero__slide swiper-slide"><img src="@img/provide.jpg" alt="Image"></div>
+							<div class="hero__slide swiper-slide"><img src="@img/provide.jpg" alt="Image"></div>
+							<div class="hero__slide swiper-slide"><img src="@img/provide.jpg" alt="Image"></div>
+						</div>
+					</div>
+					<div class="hero__arrows arrows-gray">
+						<button type="button" class="arrows-gray__arrow arrows-gray__arrow--prev _icon-arrow-sm"></button>
+						<button type="button" class="arrows-gray__arrow arrows-gray__arrow--next _icon-arrow-sm"></button>
+					</div>
+				</div>
+			</section>
+			<!-- [Provide] -->
+			<section class="provide">
+				<div class="provide__container">
+					<div class="provide__text text">
+						<p>АО ИК «Ренессанс Групп» - это современный многоцелевой грузовой центр по ремонту и техническому обслуживанию грузовых автомобилей, а также прицепной техники и продаже запасных частей. Работает в сфере сервисного обслуживания и ремонта грузового транспорта более 10 лет! Является официальным дилером SITRAK, ТОНАР.</p>
+						<p>Компания имеет в собственности 2 сервисных станции расположенных в пригородах Владивостока и Уссурийска.</p>
+						<p>СТО располагают всеми необходимыми производственными мощностями. Ремонтные цеха и боксы, оснащенный современным диагностическим и ремонтным оборудованием, что позволяет выполнять точную диагностику грузовых автомобилей, сократить сроки ремонта и предоставить качественные услуги.</p>
+					</div>
+					<div class="relate__items">
+						<div class="relate__item item-relate">
+							<img src="@img/relate/01.jpg" alt="Image">
+							<div class="item-relate__label">
+								<span>Ремонт и обслуживание грузовых автомобилей</span>
+								<a href="" class="item-relate__button button">Подробнее</a>
 							</div>
-							<div class="values-about__right text">
-								<p>Наш опыт и квалификация персонала позволяют оперативно и качественно выполнять ремонт любой сложности в самые кратчайшие сроки.</p>
-								<div>
-									<span>Мы готовы предложить вам:</span>
-									<ul>
-										<li>Компьютерную диагностику грузовой и прицепной техники</li>
-										<li>Техническое обслуживание и ремонт грузовых автомобилей и прицепной техники</li>
-										<li>Продажу и установку запасных частей</li>
-										<li>Ремонт двигателей, коробок передач и редукторов</li>
-										<li>Электротехнические работы</li>
-										<li>Проверку и регулировку схождения и соосности на лазерном стенде</li>
-										<li>Диагностику и ремонт подвески</li>
-										<li>Установку дополнительного оборудования (гидрофикация, отопители)</li>
-										<li>Обслуживание, ремонт и заправка кондиционеров</li>
-										<li>Кузовной ремонт грузовых автомобилей и прицепной техники, покраска автомобилей</li>
-										<li>Дополнительное утепление кабин</li>
-										<li>Грузовую автомойку</li>
-										<li>Шиномонтаж</li>
-										<li>Изготовление шлангов РВД</li>
+						</div>
+						<div class="relate__item item-relate">
+							<img src="@img/relate/02.jpg" alt="Image">
+							<div class="item-relate__label">
+								<span>Выездной сервис</span>
+								<a href="" class="item-relate__button button">Подробнее</a>
+							</div>
+						</div>
+						<div class="relate__item item-relate">
+							<img src="@img/relate/03.jpg" alt="Image">
+							<div class="item-relate__label">
+								<span>Кузовной ремонт</span>
+								<a href="" class="item-relate__button button">Подробнее</a>
+							</div>
+						</div>
+						<div class="relate__item item-relate">
+							<img src="@img/relate/04.jpg" alt="Image">
+							<div class="item-relate__label">
+								<span>Грузовая автомойка</span>
+								<a href="" class="item-relate__button button">Подробнее</a>
+							</div>
+						</div>
+						<div class="relate__item item-relate">
+							<img src="@img/relate/05.jpg" alt="Image">
+							<div class="item-relate__label">
+								<span>Продажа техники</span>
+								<a href="" class="item-relate__button button">Подробнее</a>
+							</div>
+						</div>
+						<div class="relate__item item-relate">
+							<img src="@img/relate/06.jpg" alt="Image">
+							<div class="item-relate__label">
+								<span>Установка дополнитель-ного оборудовния</span>
+								<a href="" class="item-relate__button button">Подробнее</a>
+							</div>
+						</div>
+					</div>
+					<div class="provide__info info-provide">
+						<div class="info-provide__article">
+							<div class="info-provide__items">
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">АО ИК «Ренессанс Групп» с. Михайловка</h5>
+									<ul class="block-contacts__list">
+										<li>692651, Приморский край,</li>
+										<li>с. Михайловка, ул. Паровозная. д.37</li>
+										<li>Тел: +7 (4232) 64 80 05</li>
 									</ul>
 								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Сервис-менеджер</h5>
+									<ul class="block-contacts__list">
+										<li>Раб: +7 (4232) 64 80 05</li>
+										<li>Моб. +7 (9240) 05 60 32</li>
+										<li>E-mail: <a href="mailto:servicemanager.m@rengroup.ru">servicemanager.m@rengroup.ru</a></li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Мастер приёмщик</h5>
+									<ul class="block-contacts__list">
+										<li>Раб: +7 (4232) 64 80 05</li>
+										<li>Моб: +7 (9241) 27 45 39</li>
+										<li>E-mail: <a href="mailto:priemka.m@rengroup.ru">priemka.m@rengroup.ru</a></li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">График работы:</h5>
+									<ul class="block-contacts__list">
+										<li>ежедневно с 09:00 до 21:00</li>
+										<li>перерыв с 13:00 до 14:00</li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Менеджер по работе с запасными частями</h5>
+									<ul class="block-contacts__list">
+										<li>Моб: +7(924) 127 51 62</li>
+										<li>E-mail: <a href="mailto:morozov@rengroup.ru">morozov@rengroup.ru</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="info-provide__map">
+								<iframe src="https://yandex.ru/map-widget/v1/?ll=132.054124%2C43.942561&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0NjU3OTgxNjQzEm_QoNC-0YHRgdC40Y8sINCf0YDQuNC80L7RgNGB0LrQuNC5INC60YDQsNC5LCDRgdC10LvQviDQnNC40YXQsNC50LvQvtCy0LrQsCwg0J_QsNGA0L7QstC-0LfQvdCw0Y8g0YPQu9C40YbQsCwgMzciCg2DCQRDFX3NL0I%2C&z=12.37" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
+							</div>
+						</div>
+						<div class="info-provide__article">
+							<div class="info-provide__items">
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">АО ИК «Ренессанс Групп» г. Артём</h5>
+									<ul class="block-contacts__list">
+										<li>692770, Приморский край, г. Артём, </li>
+										<li>ул. Орджоникидзе, дом 15</li>
+										<li>Тел: +7 (423) 246 34 39</li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Сервис-менеджер</h5>
+									<ul class="block-contacts__list">
+										<li>Раб: +7 (423) 246 34 39</li>
+										<li>Моб. +7 (924) 520 40 05</li>
+										<li>E-mail: <a href="mailto:servicemanager@rengroup.ru">servicemanager@rengroup.ru</a></li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Мастер приёмщик</h5>
+									<ul class="block-contacts__list">
+										<li>Раб: +7 (423) 246 34 39</li>
+										<li>Моб: +7 (924) 730-16-60</li>
+										<li>E-mail: <a href="mailto:priemka@rengroup.ru">priemka@rengroup.ru</a></li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Менеджер по работе с запасными частями</h5>
+									<ul class="block-contacts__list">
+										<li>Раб: +7 (423) 246 3439</li>
+										<li>Моб: +7 (924) 739 9499</li>
+										<li>E-mail: <a href="mailto:sparts@rengroup.ru">sparts@rengroup.ru</a></li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">Сервис-менеджер (спецтехника)</h5>
+									<ul class="block-contacts__list">
+										<li>Моб: +7 924-004-14-07</li>
+										<li>E-mail: <a href="mailto:semchenkov.sv@rengroup.ru">semchenkov.sv@rengroup.ru</a></li>
+									</ul>
+								</div>
+								<div class="block-contacts__item">
+									<h5 class="block-contacts__subtitle">График работы:</h5>
+									<ul class="block-contacts__list">
+										<li>ежедневно с 09:00 до 21:00</li>
+										<li>перерыв с 13:00 до 14:00</li>
+									</ul>
+								</div>
+							</div>
+							<div class="info-provide__map">
+								<iframe src="https://yandex.ru/map-widget/v1/?ll=132.054124%2C43.942561&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgo0NjU3OTgxNjQzEm_QoNC-0YHRgdC40Y8sINCf0YDQuNC80L7RgNGB0LrQuNC5INC60YDQsNC5LCDRgdC10LvQviDQnNC40YXQsNC50LvQvtCy0LrQsCwg0J_QsNGA0L7QstC-0LfQvdCw0Y8g0YPQu9C40YbQsCwgMzciCg2DCQRDFX3NL0I%2C&z=12.37" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
 							</div>
 						</div>
 					</div>
@@ -197,7 +208,7 @@
 			<!-- [Comfort] -->
 			<section class="comfort comfort--padmin">
 				<div class="comfort__container">
-					<h3 class="comfort__title title title--ord">С нами удобно</h3>
+					<h3 class="comfort__title title title--ord">Преимущества нашего сервиса</h3>
 					<div class="comfort__advantages advantages-firm">
 						<div class="advantages-firm__item">
 							<svg class="advantages-firm__svg" viewBox="0 0 72 80" fill="none">
@@ -233,11 +244,74 @@
 					</div>
 				</div>
 			</section>
+			<!-- [Parts] -->
+			<section class="parts">
+				<div class="parts__container">
+					<div class="parts__heading heading">
+						<div class="heading__top">
+							<h3 class="heading__title title title--ord">Продажа запасных частей</h3>
+							<a href="" class="heading__button button">Перейти в каталог</a>
+						</div>
+						<ul class="heading__list">
+							<li class="heading__item"><a href="" class="heading__link">Volvo</a></li>
+							<li class="heading__item"><a href="" class="heading__link">Renault</a></li>
+							<li class="heading__item"><a href="" class="heading__link">SITRAK</a></li>
+							<li class="heading__item"><a href="" class="heading__link">Howo</a></li>
+							<li class="heading__item"><a href="" class="heading__link">Sany</a></li>
+						</ul>
+					</div>
+					<div class="parts__gallery gallery-parts">
+						<div class="gallery-parts__slider swiper">
+							<div class="gallery-parts__wrapper swiper-wrapper">
+								<div class="gallery-parts__slide swiper-slide">
+									<div class="gallery-parts__image"><img src="@img/part.jpg" alt="Image"></div>
+									<div class="gallery-parts__labels">
+										<div class="gallery-parts__name">ДВС</div>
+										<div class="gallery-parts__price">от 250000 ₽</div>
+									</div>
+								</div>
+								<div class="gallery-parts__slide swiper-slide">
+									<div class="gallery-parts__image"><img src="@img/part.jpg" alt="Image"></div>
+									<div class="gallery-parts__labels">
+										<div class="gallery-parts__name">Тормозные колодки</div>
+										<div class="gallery-parts__price">от 12000 ₽</div>
+									</div>
+								</div>
+								<div class="gallery-parts__slide swiper-slide">
+									<div class="gallery-parts__image"><img src="@img/part.jpg" alt="Image"></div>
+									<div class="gallery-parts__labels">
+										<div class="gallery-parts__name">Масла</div>
+										<div class="gallery-parts__price">от 600 ₽</div>
+									</div>
+								</div>
+								<div class="gallery-parts__slide swiper-slide">
+									<div class="gallery-parts__image"><img src="@img/part.jpg" alt="Image"></div>
+									<div class="gallery-parts__labels">
+										<div class="gallery-parts__name">Ремкомплекты</div>
+										<div class="gallery-parts__price">от 16000 ₽</div>
+									</div>
+								</div>
+								<div class="gallery-parts__slide swiper-slide">
+									<div class="gallery-parts__image"><img src="@img/part.jpg" alt="Image"></div>
+									<div class="gallery-parts__labels">
+										<div class="gallery-parts__name">ДВС</div>
+										<div class="gallery-parts__price">от 250000 ₽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="gallery-parts__arrows arrows">
+							<button type="button" class="arrows__arrow arrows__arrow--prev gallery-parts__arrow--prev _icon-arrow-sm"></button>
+							<button type="button" class="arrows__arrow arrows__arrow--next gallery-parts__arrow--next _icon-arrow-sm"></button>
+						</div>
+					</div>
+				</div>
+			</section>
 			<!-- [Quest] -->
-			<section class="quest">
+			<section class="quest pad-pr">
 				<div class="quest__inner">
 					<div class="quest__container">
-						<h3 class="quest__title title title--ord">Есть вопросы или необходима консультация?</h3>
+						<h3 class="quest__title title title--ord">Запись на сервис Ренессанс</h3>
 						<div class="quest__body">
 							<h4 class="quest__label">Заполните форму и наш специалист ответит на все возникшие вопросы!</h4>
 							<form action="#" class="quest__form form">
@@ -246,8 +320,46 @@
 									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Телефон*" class="form__input input">
 									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="E-mail" class="form__input input">
 								</div>
+								<div class="form__label">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Сервисный центр с. Михайловка, ул. Паровозная. д.37*" class="form__input input">
+								</div>
+								<div class="form__checkbox checkbox">
+									<input id="c_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="c_1" class="checkbox__label"><span class="checkbox__text">Являетесь ли клиентом компании?</span></label>
+								</div>
+								<div class="form__label">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="ИНН или название компании" class="form__input input">
+								</div>
+								<div class="form__selects">
+									<select name="form[]" data-class-modif="cart">
+										<option value="1" selected>Марка</option>
+										<option value="2">Пункт №1</option>
+										<option value="3">Пункт №2</option>
+										<option value="4">Пункт №3</option>
+									</select>
+									<select name="form[]" data-class-modif="cart">
+										<option value="1" selected>Модель</option>
+										<option value="2">Пункт №1</option>
+										<option value="3">Пункт №2</option>
+										<option value="4">Пункт №3</option>
+									</select>
+									<select name="form[]" data-class-modif="cart">
+										<option value="1" selected>Год</option>
+										<option value="2">Пункт №1</option>
+										<option value="3">Пункт №2</option>
+										<option value="4">Пункт №3</option>
+									</select>
+								</div>
+								<div class="form__checkbox checkbox">
+									<input id="v_1" data-error="Error" class="checkbox__input" type="checkbox" value="1" name="form[]">
+									<label for="v_1" class="checkbox__label"><span class="checkbox__text">Потребуется ли подбор запчастей?</span></label>
+								</div>
+								<div class="form__label">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="VIN номер" class="form__input input">
+								</div>
 								<textarea autocomplete="off" name="form[]" placeholder="Ваш вопрос*" data-error="Error" class="form__textarea input"></textarea>
 							</form>
+							<button type="button" class="quest__file _icon-pin">Прикрепить файл</button>
 							<div class="quest__actions">
 								<button type="submit" class="quest__button button">Отправить</button>
 								<div class="quest__text">Нажав кнопку «Отпраить» вы принимаете условия обработки персональных данных</div>
@@ -268,82 +380,9 @@
 				</div>
 			</section>
 		</main>
-		<!-- $=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-> -->
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__main main-footer">
-					<a href="" class="main-footer__logo _icon-logo"></a>
-					<div class="main-footer__contacts">
-						<div class="main-footer__item">
-							<h3 class="main-footer__title">Отдел продаж техники:</h3>
-							<a href="tel:+79240041407" class="main-footer__number">+7 (924) 004-1407</a>
-							<a href="tel:+79241249594" class="main-footer__number">+7 (924) 124-9594</a>
-						</div>
-						<div class="main-footer__item">
-							<h3 class="main-footer__title">Продажа Запчастей:</h3>
-							<a href="tel:+79247399499" class="main-footer__number">+7 (924) 739-9499 <span>Артем</span></a>
-							<a href="tel:+79241275162" class="main-footer__number">+7(924) 127-5162 <span>с. Михайловка</span></a>
-						</div>
-						<div class="main-footer__item">
-							<h3 class="main-footer__title">Сервисная станция:</h3>
-							<a href="tel:+79247301660" class="main-footer__number">+7 (924) 730-1660 <span>Артем</span></a>
-							<a href="tel:+79240056032" class="main-footer__number">+7 (924) 005-6032 <span>с. Михайловка</span></a>
-						</div>
-					</div>
-					<div data-da=".footer__mobile-bot, 991.98" class="main-footer__bottom bottom-footer">
-						<div class="bottom-footer__socials">
-							<a href="" class="bottom-footer__social">
-								<svg width="29" height="18" viewBox="0 0 29 18" fill="none">
-									<path d="M15.597 17.3736C5.81304 17.3736 0.232525 11.1591 0 0.818176H4.90092C5.06189 8.40814 8.67489 11.6231 11.5367 12.286V0.818176H16.1516V7.3641C18.9777 7.08238 21.9465 4.09943 22.9482 0.818176H27.563C26.7939 4.86174 23.5743 7.84469 21.2848 9.07102C23.5743 10.0653 27.2412 12.6671 28.6364 17.3736H23.5564C22.4653 14.2249 19.7468 11.7888 16.1516 11.4574V17.3736H15.597Z" fill="white" fill-opacity="0.8" />
-								</svg>
-							</a>
-							<a href="" class="bottom-footer__social">
-								<svg width="32" height="30" viewBox="0 0 32 30" fill="none">
-									<path d="M7.64819 16.7117L11.0782 25.7542C11.0782 25.7542 11.5069 26.5989 11.9651 26.5989C12.4232 26.5989 19.2538 19.8317 19.2538 19.8317L26.8513 5.86078L7.77069 14.3782L7.64819 16.7117Z" fill="white" fill-opacity="0.5" />
-									<path d="M12.1993 19.0313L11.5402 25.6959C11.5402 25.6959 11.2658 27.7377 13.4071 25.6959C15.5484 23.654 17.6015 22.0789 17.6015 22.0789" fill="white" fill-opacity="0.8" />
-									<path d="M7.71287 17.0339L0.656878 14.8451C0.656878 14.8451 -0.185921 14.5184 0.0860285 13.781C0.142378 13.6293 0.255078 13.4986 0.590728 13.2746C2.15383 12.2362 29.5276 2.86703 29.5276 2.86703C29.5276 2.86703 30.3018 2.61967 30.7575 2.78302C30.9658 2.8577 31.1005 2.94404 31.2108 3.2544C31.2524 3.36641 31.2745 3.60909 31.272 3.84712C31.272 4.0198 31.2475 4.17848 31.2304 4.4305C31.0638 6.99272 26.0756 26.1137 26.0756 26.1137C26.0756 26.1137 25.7767 27.2315 24.7085 27.2712C24.3189 27.2852 23.8461 27.2105 23.2801 26.7461C21.1805 25.0263 13.9285 20.3826 12.3262 19.3628C12.2356 19.3045 12.2111 19.2298 12.1939 19.1574C12.1719 19.0501 12.2944 18.9171 12.2944 18.9171C12.2944 18.9171 24.9241 8.22483 25.2597 7.1024C25.2867 7.01606 25.1887 6.97172 25.0564 7.00906C24.2185 7.30308 9.67531 16.0492 8.07057 17.0153C7.97747 17.0713 7.71287 17.0363 7.71287 17.0363V17.0339Z" fill="white" fill-opacity="0.8" />
-								</svg>
-							</a>
-						</div>
-						<div class="bottom-footer__copy">© 2024 РЕНЕССАНС ГРУПП. Все права защищены.</div>
-						<a href="" class="bottom-footer__rules">Политика конфиденциальности</a>
-					</div>
-				</div>
-				<div data-spollers="992" class="footer__spollers spollers">
-					<details class="spollers__item">
-						<summary class="spollers__title">Продажа спецтехники</summary>
-						<ul class="spollers__list">
-							<li class="spollers__li"><a href="" class="spollers__li-link">Автобетоносмеситель</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Автогрейдер</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Асфальтоукладчик</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Дорожная фреза</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Катки</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Экскаватор - погрузчик</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Фронтальный погрузчик</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Экскаваторы</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Седельные тягачи</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Самосвалы</a></li>
-						</ul>
-					</details>
-					<details class="spollers__item">
-						<summary class="spollers__title">Запчасти и сервисное обслуживание</summary>
-						<ul class="spollers__list">
-							<li class="spollers__li"><a href="" class="spollers__li-link">Каталог запчастей</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Ремонт и обслуживание грузовых
-									автомобилей</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Выездной сервис</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Кузовной ремонт</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Грузовая автомойка</a></li>
-							<li class="spollers__li"><a href="" class="spollers__li-link">Установка доп.оборудования</a></li>
-						</ul>
-					</details>
-				</div>
-				<div class="footer__mobile-bot"></div>
-			</div>
-		</footer>
-		<!-- Footer -->
+		@@include('html/_footer.htm',{})
 	</div>
-	<script src="js/app.min.js?_v=20240514182414"></script>
+	@@include('html/_js.htm',{})
 </body>
 
 </html>

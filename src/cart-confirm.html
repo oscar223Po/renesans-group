@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Renesans Group (Корзина Принято) - CartConfirmPage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<!-- [Breadcrumbs] -->
+			<nav class="breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a href="" class="breadcrumbs__link">Главная</a>
+						</li>
+						<span>—</span>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__current">Корзина</span>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- [Confirm] -->
+			<section class="confirm">
+				<div class="confirm__container">
+					<h3 class="confirm__title title title--ord">Корзина</h3>
+					<div class="confirm__body">
+						<div class="confirm__order">
+							<svg class="confirm__svg" viewBox="0 0 36 36" fill="none">
+								<path d="M34.9717 4.92023C34.4421 4.38973 33.5828 4.38881 33.0532 4.91798L16.7764 21.1519L10.9038 14.7736C10.3963 14.2228 9.53835 14.1871 8.98661 14.6944C8.43529 15.2019 8.39999 16.0603 8.90744 16.6116L15.7366 24.0282C15.9867 24.3 16.3367 24.4579 16.7058 24.4656C16.7157 24.466 16.7253 24.466 16.7348 24.466C17.0934 24.466 17.4385 24.3235 17.6926 24.0703L34.969 6.83913C35.5 6.31003 35.5009 5.45074 34.9717 4.92023Z" fill="#09B658" />
+								<path d="M34.6432 16.6432C33.8938 16.6432 33.2864 17.2505 33.2864 18C33.2864 26.4293 26.4293 33.2864 18 33.2864C9.57122 33.2864 2.71357 26.4293 2.71357 18C2.71357 9.57122 9.57122 2.71357 18 2.71357C18.7494 2.71357 19.3568 2.10621 19.3568 1.35682C19.3568 0.607359 18.7494 0 18 0C8.07469 0 0 8.07469 0 18C0 27.9249 8.07469 36 18 36C27.9249 36 36 27.9249 36 18C36 17.2506 35.3926 16.6432 34.6432 16.6432Z" fill="#09B658" />
+							</svg>
+							<h4 class="confirm__subtitle">Заказ №43552345897 принят!</h4>
+						</div>
+						<div class="confirm__text text"><p>Менеджер Ренессанс Групп свяжется с Вами в ближайщее время.</p></div>
+					</div>
+					<div class="confirm__thowars thowars">
+						<div class="thowars__top">
+							<div class="thowars__subtitle">Товар</div>
+							<div class="thowars__subtitle">Номер по каталогу</div>
+							<div class="thowars__subtitle">Количество</div>
+							<div class="thowars__subtitle">Склад</div>
+							<div class="thowars__subtitle">Цена</div>
+						</div>
+						<div class="thowars__items">
+							<div class="thowars__item item-thowars">
+								<div class="item-thowars__name">Самосвал SITRAK C7H-F (ЛЮКС) ZZ3316V386ME1, МКПП</div>
+								<div class="item-thowars__articul">A2034168924</div>
+								<div data-quantity class="item-thowars__quantity quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus">-</button>
+									<div class="quantity__input">
+										<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus">+</button>
+								</div>
+								<div class="item-thowars__adres">Михайловка</div>
+								<div class="item-thowars__actions">
+									<div class="item-thowars__cost">11 380 000 ₽</div>
+									<button type="button" class="item-thowars__cancel _icon-cancel"></button>
+								</div>
+							</div>
+							<div class="thowars__item item-thowars">
+								<div class="item-thowars__name">Самосвал SITRAK C7H-F (ЛЮКС) ZZ3316V386ME1, МКПП</div>
+								<div class="item-thowars__articul">A2034168924</div>
+								<div data-quantity class="item-thowars__quantity quantity">
+									<button data-quantity-minus type="button" class="quantity__button quantity__button--minus">-</button>
+									<div class="quantity__input">
+										<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+									</div>
+									<button data-quantity-plus type="button" class="quantity__button quantity__button--plus">+</button>
+								</div>
+								<div class="item-thowars__adres">Михайловка</div>
+								<div class="item-thowars__actions">
+									<div class="item-thowars__cost">11 380 000 ₽</div>
+									<button type="button" class="item-thowars__cancel _icon-cancel"></button>
+								</div>
+							</div>
+						</div>
+						<div class="thowars__values">
+							<div class="thowars__cost">Итого: <span>22 760 000 ₽</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- [Quest] -->
+			<section class="quest pad-min">
+				<div class="quest__inner">
+					<div class="quest__container">
+						<h3 class="quest__title title title--ord">Есть вопросы или необходима консультация?</h3>
+						<div class="quest__body">
+							<h4 class="quest__label">Заполните форму и наш специалист ответит на все возникшие вопросы!</h4>
+							<form action="#" class="quest__form form">
+								<div class="form__inputs">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Ваше имя*" class="form__input input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Телефон*" class="form__input input">
+									<input autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="E-mail" class="form__input input">
+								</div>
+								<textarea autocomplete="off" name="form[]" placeholder="Ваш вопрос*" data-error="Error" class="form__textarea input"></textarea>
+							</form>
+							<div class="quest__actions">
+								<button type="submit" class="quest__button button">Отправить</button>
+								<div class="quest__text">Нажав кнопку «Отпраить» вы принимаете условия обработки персональных данных</div>
+							</div>
+						</div>
+					</div>
+					<svg class="quest__svg" viewBox="0 0 1920 184" fill="none">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M0 178.372H50.6054V141.796C88.1837 138.789 127.766 147.808 157.829 131.274C213.445 100.71 204.927 11.0231 118.246 4.00851H0.501044L0 178.372ZM50.6054 98.2048C69.144 99.2068 89.6868 98.2048 108.225 98.2048C126.764 98.2048 142.296 92.1922 141.795 73.1526C141.795 54.1129 127.766 47.5993 109.228 47.0983C90.6889 46.5972 69.144 46.0962 51.1065 47.0983L50.6054 98.2048Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M629.811 178.372H809.686V134.781H680.416V111.232H792.149L792.65 68.1421H680.918L680.416 47.0983H805.176V4.00851H630.312L629.811 178.372Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M209.938 177.871L389.813 178.372V134.781H260.544V111.232H372.277L372.778 68.6432L261.045 68.1421L260.544 47.0983H385.304V4.00851H210.44L209.938 177.871Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1246.1 178.372H1298.71C1302.71 177.37 1310.73 156.827 1311.73 153.32H1419.46C1422.46 160.334 1426.97 171.357 1431.48 177.871L1484.59 178.372L1402.92 4.00851H1330.27L1267.64 133.278C1263.13 142.798 1248.1 171.858 1246.1 178.372ZM1331.77 111.733H1345.8H1384.38H1393.9H1398.41L1369.85 46.5972H1361.34L1331.77 111.733Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M411.358 178.372H461.963V109.729H555.157L555.658 178.372H606.264V4.00851H556.16L555.658 67.14H461.963V4.00851H411.859L411.358 178.372Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1499.12 178.372H1549.73V109.729H1642.92C1643.92 123.257 1640.92 170.355 1643.92 178.372H1693.03L1693.53 4.00851H1642.92V67.14H1549.73V4.00851H1499.62L1499.12 178.372Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1160.42 0H1138.87C1127.85 4.50939 1078.75 2.00418 1052.69 48.1002C1033.15 83.1733 1040.67 123.257 1062.71 149.311C1093.78 185.887 1166.93 193.403 1214.53 165.344C1225.05 159.332 1242.59 143.299 1246.6 131.775C1242.09 128.267 1213.53 113.236 1207.52 111.232C1203.01 115.24 1200.5 119.749 1195.49 123.758C1190.98 127.766 1186.97 130.271 1180.96 133.278C1168.93 138.789 1153.9 140.793 1138.87 139.29C1077.24 133.779 1073.74 48.6012 1139.87 42.5887C1154.91 41.0856 1170.44 43.5908 1181.96 49.1023C1196.99 56.618 1199 63.1315 1207.52 71.1482L1246.6 50.1044C1242.09 38.0793 1224.55 22.547 1213.03 15.5324C1187.97 1.00209 1170.94 4.50939 1160.42 0Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M1919.5 134.781C1918.5 129.771 1921.5 132.276 1909.98 126.764C1906.47 125.261 1903.97 123.758 1900.46 121.754C1893.95 118.247 1886.93 113.737 1880.42 111.733L1877.41 114.739C1870.4 122.255 1864.38 128.769 1854.36 133.779C1822.8 148.309 1764.68 140.794 1764.68 91.6914C1764.68 39.0818 1827.31 36.5766 1854.36 49.6038C1863.88 54.1131 1875.41 63.633 1879.42 71.6497L1917.49 52.61C1918.5 51.6079 1919 51.6079 1920 51.1069C1911.98 31.0651 1883.92 12.0255 1860.38 5.5119C1853.36 3.50773 1835.82 2.0046 1831.82 0.501465H1809.27C1804.76 2.50564 1788.23 4.50981 1781.21 6.51399C1704.05 29.562 1700.04 113.737 1736.62 150.314C1745.14 158.831 1743.63 158.33 1755.16 165.846C1777.2 179.875 1808.77 185.888 1835.82 182.38C1904.97 173.362 1910.98 139.291 1919.5 134.781Z" fill="#015F99" fill-opacity="0.05" />
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M939.458 0H919.917C910.899 3.50731 893.863 1.00209 868.31 15.5324C815.7 45.595 812.694 113.737 845.763 149.311C856.786 160.835 867.809 169.353 886.848 175.365C920.919 186.889 966.514 183.883 997.078 165.845C1007.1 159.833 1025.64 142.797 1029.14 131.775C1026.14 129.269 994.072 112.234 989.061 110.731C970.523 150.313 874.322 153.82 874.322 90.6889C874.322 61.6284 894.364 45.0939 921.922 42.5887C953.988 39.5825 971.525 49.1023 989.562 70.1461C994.573 69.6451 1026.14 53.1106 1029.65 49.6033C1024.13 36.5762 1006.6 21.5449 994.072 14.0292C969.02 0.501043 949.479 3.50731 939.458 0Z" fill="#015F99" fill-opacity="0.05" />
+					</svg>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
